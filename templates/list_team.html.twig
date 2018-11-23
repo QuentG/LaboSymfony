@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Team {% endblock %}
+
+{% block body %}
+    <div class="container">
+        Liste des Teams :
+        <hr>
+        <ul>
+            {% for team in teams %}
+                <li>{{ team.id }}</li>
+                <li>{{ team.name }}</li>
+                <a href="{{ path('delete_team', {'id': team.id}) }}">
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

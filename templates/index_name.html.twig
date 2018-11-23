@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Home : {{ name }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {{ parent() }}
+        re bonjour {{ name | upper }} t'es toujours aussi beau !
+    </div>
+{% endblock %}

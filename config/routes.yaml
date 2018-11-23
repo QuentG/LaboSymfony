@@ -1,0 +1,46 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+
+home:
+  path: /
+  controller: App\Controller\HomeController::home
+
+player:
+  path: /players
+  controller: App\Controller\PlayerController::getPlayers
+
+add_player_to_team:
+  path: /players/addToTeam
+  controller: App\Controller\PlayerController::addPlayerToTeam
+
+add_player_to_team_two:
+  path: /players/addToTeam/{idPlayer}/{idTeam}
+  controller: App\Controller\PlayerController::addPlayerToTeamTwo
+
+list_team:
+  path: /team
+  controller: App\Controller\PlayerController::getTeams
+
+add_team:
+  path: /team/add
+  controller: App\Controller\PlayerController::addTeam
+
+delete_team:
+  path: /team/delete/{id}
+  controller: App\Controller\PlayerController::deleteTeam
+
+home_name:
+  path: /{name}
+  controller: App\Controller\HomeController::homeName
+
+add_player:
+  path: /players/add
+  controller: App\Controller\PlayerController::addPlayer
+
+delete_player:
+  path: /players/delete/{id}
+  controller: App\Controller\PlayerController::deletePlayer
+
